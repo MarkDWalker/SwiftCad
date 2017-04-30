@@ -36,6 +36,11 @@ class MWCopyCommandSequence: NSObject, MWCommandSequence {
         }
         
         if commandString == "copy"{
+            
+            //starts the command
+            //instructs the user to select object to copy
+            //moves the current command to "copA"
+            //sets the focus to the drawing space control
             commandAfterSelection = "copyB"    
             ipd.prepareNewLine()
             ipd.outputText("Select Objects to Copy>")
@@ -46,6 +51,16 @@ class MWCopyCommandSequence: NSObject, MWCommandSequence {
             ipd.makeCurrentCommand(cadCommandList.commands["copyA"]!)
             
         }else if commandString == "copyA"{
+            //this is only hit after every after "copy give the dsd focus and
+            //the mouse click event is triggered
+            //The command will not be advanced to "copyB" until the
+            //dsd enter event is triggered
+            
+            
+            
+            //This section adds the entities to the selected entities table
+            //redisplays the dsd to show the selected entities
+            //prompts the user in the ipd to select more or click enter to finish
             guard let ipd = inputPanelDelegate else{
                 return
             }
@@ -90,7 +105,11 @@ class MWCopyCommandSequence: NSObject, MWCommandSequence {
             ipd.prepareNewLine()
             
         }else if commandString == "copyB"{
+            //after selecting items in "copyA" the user must press enter
+            //which advances the command to "copy" in the dsd enter key event
             
+            //this section prompts the user to select a base point
+            //advances the command to "copyC" and sets focus to dsd
             
             ipd.prepareNewLine()
             ipd.outputText("Select Base Point.")
@@ -101,9 +120,19 @@ class MWCopyCommandSequence: NSObject, MWCommandSequence {
             dsd.makeCurrentCommand(cadCommandList.commands["copyC"]!)
             ipd.makeCurrentCommand(cadCommandList.commands["copyC"]!)
             
-            self.commandAfterSelection = "copyD"
+            
             
         }else if commandString == "copyC"{
+            //after "copyB" dsd will detect a base point selection
+            // and run run "copyC"
+            
+            
+            //This section promps the user to select the second point for 
+            //location change but since the change can also be a command line 
+            //text entry (ex: @5<90) then we have to set the commandAfterSelection
+            //which will handle the return event
+            
+            self.commandAfterSelection = "copyD"
             
             ipd.prepareNewLine()
             ipd.outputText("Select Second Point.")

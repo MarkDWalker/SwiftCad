@@ -168,7 +168,7 @@ class MWCadLine: NSObject, MWCadEntity {
     }
     
     fileprivate func setSelectionPtSpacing(){
-        selectionPtSpacing = modelLine.length / b
+        selectionPtSpacing = modelLine.length / 30
     }
     
     
