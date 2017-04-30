@@ -105,8 +105,10 @@ class MWCopyCommandSequence: NSObject, MWCommandSequence {
             ipd.prepareNewLine()
             
         }else if commandString == "copyB"{
+            
+            
             //after selecting items in "copyA" the user must press enter
-            //which advances the command to "copy" in the dsd enter key event
+            //which advances the command to "copyC" in the dsd enter key event
             
             //this section prompts the user to select a base point
             //advances the command to "copyC" and sets focus to dsd
@@ -124,7 +126,7 @@ class MWCopyCommandSequence: NSObject, MWCommandSequence {
             
         }else if commandString == "copyC"{
             //after "copyB" dsd will detect a base point selection
-            // and run run "copyC"
+            // and  run "copyC"
             
             
             //This section promps the user to select the second point for 
@@ -205,6 +207,7 @@ class MWCopyCommandSequence: NSObject, MWCommandSequence {
         }
         
         dsd.mySetDrawTempLine(false)
+        dsd.mySetDrawTempMoveEntities(false)
         dsd.adjustTablesOnSelectionClear()
         dsd.remoteDisplay()
         

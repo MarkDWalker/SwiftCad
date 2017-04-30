@@ -94,6 +94,11 @@ class MWMoveCommmadSequence: NSObject, MWCommandSequence{
         }else if commandString == "moveB"{
          
             
+            //after selecting items in "moveA" the user must press enter
+            //which advances the command to "moveC" in the dsd enter key event
+            
+            //this section prompts the user to select a base point
+            //advances the command to "moveC" and sets focus to dsd
             ipd.prepareNewLine()
             ipd.outputText("Select Base Point.")
             ipd.prepareNewLine()
@@ -107,8 +112,15 @@ class MWMoveCommmadSequence: NSObject, MWCommandSequence{
             
             
         }else if commandString == "moveC"{
-            //this is here so the user can hit return after entering
-            //the exact move at the command line -- EX: @50<20
+            //after "moveB" dsd will detect a base point selection
+            // and  run "moveC"
+            
+            
+            //This section promps the user to select the second point for
+            //location change but since the change can also be a command line
+            //text entry (ex: @5<90) then we have to set the 
+            //commandAfterSelection which will handle the return event
+            
             self.commandAfterSelection = "moveD"
             
             ipd.prepareNewLine()
@@ -180,6 +192,7 @@ class MWMoveCommmadSequence: NSObject, MWCommandSequence{
         }
         
         dsd.mySetDrawTempLine(false)
+         dsd.mySetDrawTempMoveEntities(false)
         dsd.adjustTablesOnSelectionClear()
         dsd.remoteDisplay()
         
