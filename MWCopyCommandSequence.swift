@@ -214,7 +214,14 @@ class MWCopyCommandSequence: NSObject, MWCommandSequence {
     }
     
     func endMidCommand(){
+        guard let dsd = drawingSpaceDelegate else{
+            return
+        }
         
+        dsd.mySetDrawTempLine(false)
+        dsd.mySetDrawTempMoveEntities(false)
+        dsd.adjustTablesOnSelectionClear()
+        dsd.remoteDisplay()
     }
 
     

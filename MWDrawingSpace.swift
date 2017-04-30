@@ -250,6 +250,7 @@ class MWDrawingSpace: NSView, MWDrawingController {
     
     //MARK:IMPORTANT
     override func keyDown(with theEvent: NSEvent) {
+        
         let key:String? = theEvent.charactersIgnoringModifiers
         
         if key == "a" && theEvent.modifierFlags.contains(.control){
@@ -278,49 +279,7 @@ class MWDrawingSpace: NSView, MWDrawingController {
             
         }else if theEvent.keyCode == 36{ // press enter
             
-            Swift.print("Enter was hit")
-            if currentCommand.endSelectionOnReturn == true{
-                guard let sequence = currentCommand.commandSequence else{
-                    return
-                }
-                
-                //moves the command string to the next subcommand
-                guard let commandString = sequence.commandAfterSelection else{
-                    return
-                }
-                
-                ///////////////////////////////////////
-                sequence.runCommandSequence(cadCommandList.commands[commandString]!)
-                
-                if renderPickBox == true{
-                    
-                    renderPickBox = false
-                    self.display()
-                }
-           
-                ////////////////////////////////////////
-            }else if currentCommand.endCommandOnReturn == true{
-                
-                guard let ipd = inputPanelDelegate else{
-                    return
-                }
-                
-                guard let commandSequence = currentCommand.commandSequence else{
-                    self.cancelCommand()
-                    ipd.endCommand()
-                    return
-                }
-                self.cancelCommand() //standard for all commands
-                ipd.endCommand() //standard for all commands
-                commandSequence.endMidCommand() //anything special the current
-                
-            }else{
-                guard let ipd = inputPanelDelegate else{
-                    return
-                }
-                let key:String? = theEvent.characters
-                ipd.setFocusWithChar(key!)
-            }
+            handleEnterPress(theEvent: theEvent)
             
             
         }else{ //no special key pressed, send the key to the input panel
@@ -333,6 +292,59 @@ class MWDrawingSpace: NSView, MWDrawingController {
         }
         
         self.display()
+    }
+    
+    override func rightMouseDown(with Event: NSEvent) {
+        
+        handleEnterPress(theEvent: Event)
+        
+    }
+    
+    private func handleEnterPress(theEvent:NSEvent){
+        Swift.print("Enter was hit")
+        if currentCommand.endSelectionOnReturn == true{
+            guard let sequence = currentCommand.commandSequence else{
+                return
+            }
+            
+            //moves the command string to the next subcommand
+            guard let commandString = sequence.commandAfterSelection else{
+                return
+            }
+            
+            ///////////////////////////////////////
+            sequence.runCommandSequence(cadCommandList.commands[commandString]!)
+            
+            if renderPickBox == true{
+                
+                renderPickBox = false
+                self.display()
+            }
+            
+            ////////////////////////////////////////
+        }else if currentCommand.endCommandOnReturn == true{
+            
+            guard let ipd = inputPanelDelegate else{
+                return
+            }
+            
+            guard let commandSequence = currentCommand.commandSequence else{
+                self.cancelCommand()
+                ipd.endCommand()
+                return
+            }
+            self.cancelCommand() //standard for all commands
+            ipd.endCommand() //standard for all commands
+            commandSequence.endMidCommand() //anything special the current
+            
+        }else{
+            guard let ipd = inputPanelDelegate else{
+                return
+            }
+            let key:String? = theEvent.characters
+            ipd.setFocusWithChar(key!)
+        }
+
     }
     
     

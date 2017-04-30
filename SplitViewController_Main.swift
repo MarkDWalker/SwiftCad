@@ -222,9 +222,11 @@ class SplitViewController_Main: NSSplitViewController{
         
         let copyCCommand = MWCadCommand(name: "copyC", acceptsPtInput: true, acceptsAngleDistInput: true)
         copyCCommand.commandSequence = copySequence
+       
         
         let copyDCommand = MWCadCommand(name: "copyD", acceptsPtInput: true, acceptsAngleDistInput: true)
         copyDCommand.commandSequence = copySequence
+         copyDCommand.endCommandOnReturn = true
         
         //let copyECommand = MWCadCommand(name: "copyE", acceptsPtInput: false, acceptsAngleDistInput: false)
         //copyECommand.commandSequence = copySequence
