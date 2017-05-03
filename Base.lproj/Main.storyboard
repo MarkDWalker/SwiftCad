@@ -689,19 +689,19 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="DrawingSpace_CustomTransforms_V0_0_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="548" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <toolbar key="toolbar" implicitIdentifier="92A3429B-5368-46EB-B39C-201B6C947C76" displayMode="iconAndLabel" sizeMode="small" id="Djp-Ht-qPC">
+                        <toolbar key="toolbar" implicitIdentifier="92A3429B-5368-46EB-B39C-201B6C947C76" displayMode="iconOnly" sizeMode="small" id="Djp-Ht-qPC">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="MKK-Pb-fK2"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="dJ1-lO-Ftm"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="Me8-xq-G9s"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="h3V-TP-RG3"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="P5s-e8-uHR"/>
-                                <toolbarItem implicitItemIdentifier="45BF37F3-AF15-4891-B17A-69B81593E352" label="cRight" paletteLabel="cRight" tag="-1" image="righton" id="Bbg-Wu-OTw">
+                                <toolbarItem implicitItemIdentifier="45BF37F3-AF15-4891-B17A-69B81593E352" label="cRight" paletteLabel="cRight" tag="-1" image="righton" selectable="YES" id="Bbg-Wu-OTw">
                                     <connections>
                                         <action selector="toggleRight:" target="Oky-zY-oP4" id="MEH-8J-etJ"/>
                                     </connections>

@@ -315,11 +315,20 @@ class SplitViewController_Main: NSSplitViewController{
     
     
     @IBAction func toggleEndSnap(_ sender: AnyObject){
+    
+        let button = sender as! NSToolbarItem
+        button.image = NSImage(named: "righton.png")
+        
+        
         vc_DwgControl.drawingControl.toggleEndSnap()
         vc_InputPanel.commandControl.outputText("")
         vc_InputPanel.commandControl.outputText("end snap toggle")
         vc_InputPanel.commandControl.outputText("")
+        button.image = NSImage(named: "lefton.png")
         vc_DwgControl.drawingControl.setFocus()
+        
+       
+     
     }
     
     @IBAction func toggleCenterSnap(_ sender: AnyObject){
