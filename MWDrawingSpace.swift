@@ -920,7 +920,7 @@ class MWDrawingSpace: NSView, MWDrawingController {
     }
     
     func addEntityArray(_ entities:[MWEntity]){
-        for i:Int in 0  ... entities.count-1{
+        for i:Int in 0  ..< entities.count{
             addEntity(entities[i])
         }
     }

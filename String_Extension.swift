@@ -82,7 +82,7 @@ extension String {
             var currentSearchLocation  = char1MatchLoc + 1
             var stillMatching:Bool = true
             
-            for i:Int in 1 ... searchString.characters.count-1{
+            for i:Int in 1 ..< searchString.characters.count{
                 let letterA = self[currentSearchLocation] as String
                 let letterB = searchString[i] as String
                 if letterA  == letterB{
