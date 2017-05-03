@@ -706,8 +706,12 @@
                                         <action selector="toggleRight:" target="Oky-zY-oP4" id="MEH-8J-etJ"/>
                                     </connections>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="87342E79-3BD0-4238-BC6E-4BAB6ABC0DCC" label="End Snap" paletteLabel="End Snap" tag="-1" image="NSActionTemplate" id="3ka-2v-Yvn"/>
+                                <toolbarItem implicitItemIdentifier="64EA3CF8-0D0C-4F02-A4F5-15914A976281" label="Center Snap" paletteLabel="Center Snap" tag="-1" image="NSAddTemplate" id="mr6-CY-2WF"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
+                                <toolbarItem reference="3ka-2v-Yvn"/>
+                                <toolbarItem reference="mr6-CY-2WF"/>
                                 <toolbarItem reference="P5s-e8-uHR"/>
                                 <toolbarItem reference="Bbg-Wu-OTw"/>
                             </defaultToolbarItems>
@@ -1001,6 +1005,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
         <image name="righton" width="309.06121826171875" height="309.06121826171875"/>
     </resources>
 </document>
