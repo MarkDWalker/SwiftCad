@@ -694,7 +694,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="548" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <toolbar key="toolbar" implicitIdentifier="92A3429B-5368-46EB-B39C-201B6C947C76" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="small" id="Djp-Ht-qPC">
+                        <toolbar key="toolbar" implicitIdentifier="92A3429B-5368-46EB-B39C-201B6C947C76" displayMode="iconAndLabel" sizeMode="small" id="Djp-Ht-qPC">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="MKK-Pb-fK2"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="dJ1-lO-Ftm"/>
@@ -706,10 +706,20 @@
                                         <action selector="toggleRight:" target="Oky-zY-oP4" id="MEH-8J-etJ"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="87342E79-3BD0-4238-BC6E-4BAB6ABC0DCC" label="End Snap" paletteLabel="End Snap" tag="-1" image="NSActionTemplate" id="3ka-2v-Yvn"/>
-                                <toolbarItem implicitItemIdentifier="64EA3CF8-0D0C-4F02-A4F5-15914A976281" label="Center Snap" paletteLabel="Center Snap" tag="-1" image="NSAddTemplate" id="mr6-CY-2WF"/>
+                                <toolbarItem implicitItemIdentifier="87342E79-3BD0-4238-BC6E-4BAB6ABC0DCC" label="End Snap" paletteLabel="End Snap" tag="-1" image="NSActionTemplate" id="3ka-2v-Yvn">
+                                    <connections>
+                                        <action selector="toggleEndSnap:" target="Oky-zY-oP4" id="L5f-LS-owf"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="64EA3CF8-0D0C-4F02-A4F5-15914A976281" label="Center Snap" paletteLabel="Center Snap" tag="-1" image="NSAddTemplate" id="mr6-CY-2WF">
+                                    <connections>
+                                        <action selector="toggleCenterSnap:" target="Oky-zY-oP4" id="Ut3-Xc-rTs"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
+                                <toolbarItem reference="h3V-TP-RG3"/>
+                                <toolbarItem reference="P5s-e8-uHR"/>
                                 <toolbarItem reference="3ka-2v-Yvn"/>
                                 <toolbarItem reference="mr6-CY-2WF"/>
                                 <toolbarItem reference="P5s-e8-uHR"/>

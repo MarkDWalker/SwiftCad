@@ -314,7 +314,21 @@ class SplitViewController_Main: NSSplitViewController{
     }
     
     
+    @IBAction func toggleEndSnap(_ sender: AnyObject){
+        vc_DwgControl.drawingControl.toggleEndSnap()
+        vc_InputPanel.commandControl.outputText("")
+        vc_InputPanel.commandControl.outputText("end snap toggle")
+        vc_InputPanel.commandControl.outputText("")
+        vc_DwgControl.drawingControl.setFocus()
+    }
     
+    @IBAction func toggleCenterSnap(_ sender: AnyObject){
+        vc_DwgControl.drawingControl.toggleCenterSnap()
+        vc_InputPanel.commandControl.outputText("")
+        vc_InputPanel.commandControl.outputText("center snap toggle")
+        vc_InputPanel.commandControl.outputText("")
+        vc_DwgControl.drawingControl.setFocus()
+    }
     
     
    

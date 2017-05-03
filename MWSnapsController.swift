@@ -52,7 +52,7 @@ class MWSnapsController: NSObject {
         var returnEntityList = [MWCadEntity]()
         
         // function builds an array of entities but only adds the entity if the startPt or EndPt of the entity is withing the snap radius
-        for i:Int in 0 ... entityDB.count-1{
+        for i:Int in 0 ..< entityDB.count{
             if  entityDB[i].kind == "line"{
                 let cadLine = entityDB[i] as? MWCadLine
                 if distFromCoords(withMCoords, coord2: cadLine!.viewLine.startPt) <= snapRadius{
