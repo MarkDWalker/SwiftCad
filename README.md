@@ -31,6 +31,6 @@ In addition the following types of selection is supported:
 See screenshots below:
 
 <p align="center">
-  <img src="readmeImages/Drawing a Line.png" width="350"/>
+  <img src="readmeImages\Drawing a Line.png" width="350"/>
   <img src="readmeImages/Drawing a Circle.png" width="350"/>
 </p>
