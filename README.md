@@ -29,3 +29,8 @@ In addition the following types of selection is supported:
 
 See screenshots below:
 
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/23097584/25714609/8cdd1154-30c6-11e7-9951-01d0c62fcf30.png" width="350"/>
+  
+</p>
+
