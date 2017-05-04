@@ -30,7 +30,10 @@ In addition the following types of selection is supported:
 See screenshots below:
 
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/23097584/25714609/8cdd1154-30c6-11e7-9951-01d0c62fcf30.png" width="350"/>
-  
+  <img src="https://cloud.githubusercontent.com/assets/23097584/25714609/8cdd1154-30c6-11e7-9951-01d0c62fcf30.png" width=850"/>
+</p>
+
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/23097584/25714612/8ce68676-30c6-11e7-8cdd-8f7d8de4e88d.png" width=850"/>
 </p>
 
