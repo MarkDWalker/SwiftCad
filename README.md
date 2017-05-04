@@ -37,3 +37,7 @@ See screenshots below:
   <img src="https://cloud.githubusercontent.com/assets/23097584/25714612/8ce68676-30c6-11e7-8cdd-8f7d8de4e88d.png" width=850"/>
 </p>
 
+<p align="center">
+  <img src="hhttps://cloud.githubusercontent.com/assets/23097584/25714611/8cdf2b7e-30c6-11e7-9d5e-a1f88b64a222.png" width=850"/>
+</p>
+
